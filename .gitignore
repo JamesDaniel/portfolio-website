@@ -84,3 +84,6 @@ jspm_packages
 
 # Output of 'npm pack'
 *.tgz
+
+# pm2 process manager
+ecosystem.config.js
