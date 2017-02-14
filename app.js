@@ -7,7 +7,7 @@ var fs = require('fs');
 
 var appPort = 8080;
 
-require('./database')();
+//require('./database')();
 
 
 var app = express();
