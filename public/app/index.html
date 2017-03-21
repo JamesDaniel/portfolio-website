@@ -28,10 +28,11 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="app/app.js"></script>
 </head>
 
-<body>
+<body ng-app="app">
 
     <!-- Navigation -->
     <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
@@ -158,8 +159,8 @@
 
     <!-- Callout -->
     <aside class="callout">
-        <div class="text-vertical-center">
-            <h1>&#x0201CMeasuring programming progress by lines of code is like measuring aircraft building progress by weight&#x0201E ~Bill Gates</h1>
+        <div ng-controller="sayingsCtrl" class="text-vertical-center">
+            <h1>{{quote}}</h1>
         </div>
     </aside>
 
