@@ -2,5 +2,6 @@
  * @author James Daniel
  */
 exports.index = function (req, res) {
-    res.sendFile('index.html', {root: __dirname + '/../public'});
+    var path = require('path');
+    res.sendFile('index.html', { root: path.join(__dirname, '../public/app') });
 }
