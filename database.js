@@ -2,11 +2,8 @@
  * @author James Daniel
  */
 var mongoose = require('mongoose');
-var db = {
-    host: 'localhost',
-    port: '27017',
-    name: 'portfolio'
-};
+var config = require('./config.js');
+/*
 var mongoUri = 'mongodb://' + db.host + ':' + db.port + '/' + db.name;
 
 module.exports = function () {
@@ -17,5 +14,15 @@ module.exports = function () {
         throw new Error('Unable to connect to database at ' + mongoUri);
     });
 };
+*/
+var sayingMod = require('./models/saying');
 
-require('./models/project');
+//mongoose.connect('mongodb://localhost/sayings');
+var connStr = config.dev.db.connStr;
+mongoose.connect(connStr);
+
+var con = mongoose.connection;
+con.once('open', function () {
+    console.log('connected to mongodb successfully!');
+    sayingMod.seedSayings();
+});

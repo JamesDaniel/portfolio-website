@@ -8,8 +8,7 @@ var fs = require('fs');
 var appPort = process.env.PORT || 8080;
 var appIp = process.env.IP || null;
 
-//require('./database')();
-
+require('./database');
 
 var app = express();
 

@@ -87,3 +87,5 @@ jspm_packages
 
 # pm2 process manager
 ecosystem.config.js
+
+data/
