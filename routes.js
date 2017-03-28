@@ -6,4 +6,5 @@ module.exports = function (app) {
     var sayings = require('./controllers/sayings');
     app.get('/', webPages.index);
     app.get('/api/sayings/all', sayings.all);
+    app.get('/api/sayings/first', sayings.first);
 }
