@@ -10,7 +10,7 @@ require('./models/Saying');
 var connStr = config.getDbStr();
 
 sayingData.connectDB(connStr)
-.then( () => {
+.then( function() {
     console.log('connected to mongodb successfully!');
     sayingData.seedSayings();
 });

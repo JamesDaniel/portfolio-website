@@ -3,7 +3,7 @@ var Promise = require('bluebird');
 
 var Saying = mongoose.model('Saying');
 
-var findSayings = (query) => {
+var findSayings = function(query) {
     return Promise.cast(Saying.find(query).exec());
 };
 
@@ -13,10 +13,10 @@ exports.connectDB = Promise.promisify(mongoose.connect, {context: mongoose});
 
 var createSaying = Promise.promisify(Saying.create, {context: Saying});
 
-exports.seedSayings = () => {
-    return findSayings({}).then( (collection) => {
+exports.seedSayings = function() {
+    return findSayings({}).then( function(collection) {
         if (collection.length === 0) {
-            return Promise.map(sayings, (job) => {
+            return Promise.map(sayings, function(job) {
                 return createSaying(job);
             });
         }
