@@ -32,7 +32,13 @@ module.exports = (function () {
         creds.db.uname = 'tempUser';
         creds.db.pass = 'tempPass';
     } else {
-        console.log('No environment set. -------------');
+        creds.host = process.env.IP || null; // TODO config for codeship
+        creds.port = process.env.PORT || 8080;
+        creds.db.host = 'ds137340.mlab.com';
+        creds.db.port = 37340;
+        creds.db.dbName = 'sayings';
+        creds.db.uname = 'tempUser';
+        creds.db.pass = 'tempPass';
     }
     
     return {
