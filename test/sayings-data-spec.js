@@ -1,7 +1,7 @@
 var expect = require("chai").expect;
 var config = require('../config.js');
 var mongoose = require('mongoose');
-var sayingMod = require('../models/Saying');
+require('../models/Saying');
 var Promise = require("bluebird");
 var sayingsData = require("../sayings-data");
 
@@ -20,7 +20,7 @@ describe("get sayings", function () {
     before((done) => {
         sayingsData.connectDB(connStr)
         .then(resetSayings)
-        .then(sayingMod.seedSayings)
+        .then(sayingsData.seedSayings)
         .then(sayingsData.findSayings)
         .then( (collection) => {
             sayings = collection;

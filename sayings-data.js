@@ -11,13 +11,13 @@ exports.findSayings = findSayings;
 
 exports.connectDB = Promise.promisify(mongoose.connect, {context: mongoose});
 
-var createJob = Promise.promisify(Saying.create, {context: Saying});
+var createSaying = Promise.promisify(Saying.create, {context: Saying});
 
 exports.seedSayings = () => {
     return findSayings({}).then( (collection) => {
         if (collection.length === 0) {
             return Promise.map(sayings, (job) => {
-                return createJob(job);
+                return createSaying(job);
             });
         }
     });

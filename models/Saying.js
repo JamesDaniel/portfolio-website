@@ -3,7 +3,6 @@
  */
  
 var mongoose = require('mongoose');
-var Promise = require('bluebird');
 var Schema = mongoose.Schema;
 
 var SayingSchema = new Schema({
@@ -20,18 +19,3 @@ var sayings = [
     ]
 
 var Saying = mongoose.model('Saying', SayingSchema);
-function findSayings(query) {
-    return Promise.cast(mongoose.model('Saying').find(query).exec());
-}
-
-var createJob = Promise.promisify(Saying.create, {context: Saying});
-
-exports.seedSayings = () => {
-    return findSayings({}).then( (collection) => {
-        if (collection.length === 0) {
-            return Promise.map(sayings, (job) => {
-                return createJob(job);
-            })
-        }
-    });
-}
