@@ -4,7 +4,7 @@
   "description": "portfolio website",
   "main": "app.js",
   "scripts": {
-    "test": "istanbul cover -x *.test.js _mocha -- -R spec test/sayings-data-spec.js",
+    "test": "istanbul cover -x *.test.js _mocha -- -R spec test/sayings-data-spec.js && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
     "start": "node app.js"
   },
   "repository": {
