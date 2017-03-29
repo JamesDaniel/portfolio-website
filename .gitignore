@@ -89,3 +89,4 @@ jspm_packages
 ecosystem.config.js
 
 data/
+coverage/

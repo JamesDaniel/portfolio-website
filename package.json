@@ -4,7 +4,7 @@
   "description": "portfolio website",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "istanbul cover -x *.test.js _mocha -- -R spec test/sayings-data-spec.js",
     "start": "node app.js"
   },
   "repository": {
@@ -32,7 +32,13 @@
   },
   "devDependencies": {
     "bower": "^1.8.0",
-    "chai": "^3.5.0"
+    "chai": "^3.5.0",
+    "coveralls": "^2.12.0",
+    "istanbul": "^0.4.5",
+    "mocha": "^3.2.0",
+    "mocha-lcov-reporter": "^1.3.0"
   },
-  "engines" : { "node" : "4.7.3" }
+  "engines": {
+    "node": "4.7.3"
+  }
 }
