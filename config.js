@@ -29,16 +29,16 @@ module.exports = (function () {
         creds.db.host = 'ds137340.mlab.com';
         creds.db.port = 37340;
         creds.db.dbName = 'sayings';
-        creds.db.uname = 'tempUser';
-        creds.db.pass = 'tempPass';
-    } else {
+        creds.db.uname = process.env.DB_UNAME;
+        creds.db.pass = process.env.DB_PASS;
+    } else if (process.env.ENV === "QA") {
         creds.host = process.env.IP || null; // TODO config for codeship
         creds.port = process.env.PORT || 8080;
         creds.db.host = 'ds137340.mlab.com';
         creds.db.port = 37340;
         creds.db.dbName = 'sayings';
-        creds.db.uname = 'tempUser';
-        creds.db.pass = 'tempPass';
+        creds.db.uname = process.env.DB_UNAME;
+        creds.db.pass = process.env.DB_PASS;
     }
     
     return {
