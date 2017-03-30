@@ -21,7 +21,7 @@ module.exports = (function () {
         creds.db.host = 'localhost';
         creds.db.port = 28017;
         creds.db.dbName = 'sayings';
-        creds.db.uname = 'jamesdaniel'; 
+        creds.db.uname = 'user'; 
         creds.db.pass = process.env.DB_PASS;
     } else if (process.env.ENV === "prod") {
         creds.host = process.env.IP || null;

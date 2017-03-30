@@ -90,3 +90,4 @@ ecosystem.config.js
 
 data/
 coverage/
+public/bower_components
