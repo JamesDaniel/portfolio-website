@@ -1,3 +1,7 @@
+[ ![Codeship Status for JamesDaniel/portfolio-website](https://app.codeship.com/projects/e6f503a0-f632-0134-b0e6-5e8fac69f0da/status?branch=master)](https://app.codeship.com/projects/210471)
+[![Coverage Status](https://coveralls.io/repos/github/JamesDaniel/portfolio-website/badge.svg?branch=master)](https://coveralls.io/github/JamesDaniel/portfolio-website?branch=master)
+
+
 # portfolio-website
 Portfolio website for the job hunt in January 2017
 
