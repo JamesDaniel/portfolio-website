@@ -1,0 +1,31 @@
+{
+  "apps" : [{
+    "name"        : "my-site-deployment",
+    "script"      : "app.js",
+    "watch"       : true,
+    "env": {
+      "NODE_ENV": "development"
+    },
+    "env_production" : {
+       "NODE_ENV": "production"
+    }
+  }],
+
+  "deploy" : {
+    "production" : {
+      "user" : "root",
+      "host" : ["jamesmcgarr.me"],
+      "ref" : "origin/master",
+      "repo" : "https://github.com/JamesDaniel/portfolio-website.git",
+      "path" : "/var/www/production/deployments",
+      "ssh_options" : "StrictHostKeyChecking=no",
+      "pre-setup" : "apt-get install git",
+      "post-setup": "ls -la",
+      "pre-deploy-local" : "echo 'This is a local executed command'",
+      "post-deploy" : "npm install && pm2 startOrRestart ecosystem.json --env production",
+      "env" : {
+        "NODE_ENV" : "production"
+      }
+    }
+  }
+}
