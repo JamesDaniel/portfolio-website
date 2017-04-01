@@ -40,7 +40,9 @@ module.exports = (function () {
         creds.db.uname = process.env.DB_UNAME;
         creds.db.pass = process.env.DB_PASS;
     }
-    
+    creds.db.connStr = function () {
+        return 'mongodb://tempUser:tempPass@ds137340.mlab.com:37340/sayings';
+    }
     return {
         host: creds.host,
         port: creds.port,
