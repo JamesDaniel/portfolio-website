@@ -1,5 +1,5 @@
 [ ![Codeship Status for JamesDaniel/portfolio-website](https://app.codeship.com/projects/e6f503a0-f632-0134-b0e6-5e8fac69f0da/status?branch=master)](https://app.codeship.com/projects/210471)
-[![Build Status](http://circleci-badges-max.herokuapp.com/img/JamesDaniel/portfolio-website/?token=de99203379dcf1bb866cdc610ea22ac8cfeb78c0)](https://circleci.com/gh/JamesDaniel/portfolio-website/)
+[![CircleCI](https://circleci.com/gh/JamesDaniel/portfolio-website.svg?style=svg)](https://circleci.com/gh/JamesDaniel/portfolio-website)
 [![Coverage Status](https://coveralls.io/repos/github/JamesDaniel/portfolio-website/badge.svg?branch=master)](https://coveralls.io/github/JamesDaniel/portfolio-website?branch=master)
 
 
