@@ -4,7 +4,7 @@
 
 
 # portfolio-website
-Portfolio website for the job hunt in January 2017
+Portfolio website
 
 # References
 - https://www.freshdesignweb.com/free-coming-soon-templates/
